@@ -1,4 +1,3 @@
-
 {
   "name": "prompt-forge-ai",
   "private": true,
@@ -10,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^1.40.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

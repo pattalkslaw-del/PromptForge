@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { AppStep, PromptQuestion, UserAnswer, PromptResult, SupportingImage, HistoryItem } from './types';
-import { analyzePrompt, synthesizePrompt } from './services/geminiService';
+import { analyzePrompt, synthesizePrompt } from './services/grokService';
 
 // Layout Components
 const Header: React.FC<{ onToggleHistory: () => void; historyCount: number }> = ({ onToggleHistory, historyCount }) => (
