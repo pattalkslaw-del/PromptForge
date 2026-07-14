@@ -1,13 +1,14 @@
-
 services:
-  prompt-forge:
-    build:
-      context: .
-      args:
-        - API_KEY=${API_KEY}
-    container_name: prompt-forge-ai
+  promptforge:
+    build: .
+    container_name: promptforge
     ports:
-      - "8080:80"
+      - "3011:3000"
+    env_file:
+      - /home/patrick/.env
     environment:
-      - API_KEY=${API_KEY}
+      - XAI_API_KEY=${XAI_API_KEY}
+      - XAI_MODEL=${XAI_MODEL:-grok-4.3}
+      - NODE_ENV=production
+      - PORT=3000
     restart: unless-stopped

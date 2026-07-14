@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# PromptForge AI
 
-# Run and deploy your AI Studio app
+Turn a rough idea (plus optional reference images) into a production-quality prompt using **xAI Grok**.
 
-This contains everything you need to run your app locally.
+## Flow
 
-View your app in AI Studio: https://ai.studio/apps/drive/1qiaceTVc8gTRmK-qHINbCeZyIYoHiwrC
+1. Enter a draft idea / rough prompt and optional images
+2. Grok generates clarifying questions
+3. You answer
+4. Grok synthesizes a master prompt with role, task, context, constraints, and output format
 
-## Run Locally
+## Runtime
 
-**Prerequisites:**  Node.js
+- Express server holds `XAI_API_KEY` (never sent to the browser)
+- Model defaults to `grok-4.3` (`XAI_MODEL` overrides)
+- Host port `3011` → container `3000`
 
+## Environment
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```
+XAI_API_KEY=...
+XAI_MODEL=grok-4.3
+```
+
+Loaded from `/home/patrick/.env` via docker compose `env_file`.

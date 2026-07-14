@@ -1,10 +1,9 @@
-
 export enum AppStep {
-  INITIAL = 'INITIAL',
-  ANALYZING = 'ANALYZING',
-  QUESTIONS = 'QUESTIONS',
-  SYNTHESIZING = 'SYNTHESIZING',
-  RESULT = 'RESULT'
+  INITIAL = "INITIAL",
+  ANALYZING = "ANALYZING",
+  QUESTIONS = "QUESTIONS",
+  SYNTHESIZING = "SYNTHESIZING",
+  RESULT = "RESULT",
 }
 
 export interface PromptQuestion {
@@ -35,5 +34,5 @@ export interface HistoryItem {
   timestamp: number;
   initialPrompt: string;
   result: PromptResult;
-  images: SupportingImage[];
+  imageNames: string[];
 }
